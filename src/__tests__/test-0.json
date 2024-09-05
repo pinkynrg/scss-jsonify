@@ -1,0 +1,11 @@
+{
+    "children": {
+        "body": {
+            "children": {},
+            "attributes": {
+                "background-color": "red"
+            }
+        }
+    },
+    "attributes": {}
+}

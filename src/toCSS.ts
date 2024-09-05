@@ -13,26 +13,21 @@ import { JSONNode } from './toJSON';
  */
 export const toCSS = function (
   node: JSONNode,
-  depth = 0,
-  breaks = 0
+  depth = 0
 ): string {
   let cssString = '';
   if (node.attributes) {
-    for (const i in node.attributes) {
-      const att = node.attributes[i];
-      cssString += strAttr(i, att, depth);
-    }
+    const attributes = Object.entries(node.attributes);
+    attributes.forEach(([key, value]) => {
+      cssString += strAttr(key, value, depth);
+    });
   }
   if (node.children) {
-    let first = true;
-    for (const i in node.children) {
-      if (breaks && !first) {
-        cssString += '\n';
-      } else {
-        first = false;
-      }
-      cssString += strNode(i, node.children[i], depth);
-    }
+    const children = Object.entries(node.children);
+    children.forEach(([key, value]) => {
+      cssString += strNode(key, value, depth);
+    });
   }
-  return cssString;
+
+  return depth === 0 ? cssString.trimEnd() : cssString;
 };

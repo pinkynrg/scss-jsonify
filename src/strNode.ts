@@ -6,15 +6,8 @@ export const strNode = function (
   value: JSONNode,
   depth = 0
 ): string {
-  let cssString = '';
-  for (let i = 0; i <= depth; ++i) {
-    cssString += '  ';
-  }
-  cssString += name + ' {\n';
+  let cssString = `${'  '.repeat(depth)}${name} {\n`;
   cssString += toCSS(value, depth + 1);
-  for (let i = 0; i <= depth; ++i) {
-    cssString += '  ';
-  }
-  cssString += '}\n';
+  cssString += `${'  '.repeat(depth)}}\n`;
   return cssString;
 };
