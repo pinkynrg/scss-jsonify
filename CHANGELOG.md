@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.3 (2024-09-05)
+
+
+### Bug Fixes
+
+* remove webpack, update npm and node version ([2e42f21](https://github.com/aramk/CSSJSON/commit/2e42f2111d10932d74cdc8ee2af64073fd1004a7))
+
 ### 1.0.2 (2024-09-05)
 
 
