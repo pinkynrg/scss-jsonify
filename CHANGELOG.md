@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.2 (2024-09-05)
+
+
+### Bug Fixes
+
+* workflow node version part 3 ([47cbfe9](https://github.com/aramk/CSSJSON/commit/47cbfe96ff7d10b42ef304ba43e0872890343bbd))
+
 ### 1.0.1 (2024-09-05)
 
 

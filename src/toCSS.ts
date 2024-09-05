@@ -1,16 +1,20 @@
-import { strAttr } from './strAttr';
-import { strNode } from './strNode';
 import { JSONNode } from './toJSON';
 
-/**
- * @param node
- *            A JSON node.
- * @param depth
- *            The depth of the current node; used for indentation and
- *            optional.
- * @param breaks
- *            Whether to add line breaks in the output.
- */
+const strAttr = (name: string, value: string, depth = 0): string => {
+  return `${'  '.repeat(depth)}${name}: ${value};\n`;
+};
+
+const strNode = function (
+  name: string,
+  value: JSONNode,
+  depth = 0
+): string {
+  let cssString = `${'  '.repeat(depth)}${name} {\n`;
+  cssString += toCSS(value, depth + 1);
+  cssString += `${'  '.repeat(depth)}}\n`;
+  return cssString;
+};
+
 export const toCSS = function (
   node: JSONNode,
   depth = 0

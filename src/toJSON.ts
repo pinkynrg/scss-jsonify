@@ -1,5 +1,13 @@
-import { altX, commentX, lineAttrX } from './regex';
-import { isEmpty } from './isEmpty';
+const isEmpty = function (x: Record<any, any>): boolean {
+  return typeof x == 'undefined' || x.length == 0 || x == null;
+};
+
+const commentX = /\/\*[\s\S]*?\*\//g;
+const lineAttrX = /([^\:]+):([^\;]*);/;
+
+// This is used, a concatenation of all above. We use alternation to
+// capture.
+const altX = /(\/\*[\s\S]*?\*\/)|([^\s\;\{\}][^\;\{\}]*(?=\{))|(\})|([^\;\{\}]+\;(?!\s*\*\/))/gim;
 
 const capComment = 1;
 const capSelector = 2;
