@@ -1,6 +1,6 @@
 {
   "name": "scss-jsonify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts CSS/SCSS to JSON and back.",
   "main": "dist/index.js",
   "types": "dist/src/index.d.ts",
