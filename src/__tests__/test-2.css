@@ -1,0 +1,7 @@
+.App {
+  grid-template-areas:
+    "banner banner banner"
+    "sidebar topbar topbar"
+    "sidebar main main"
+    "sidebar footer footer";
+}

@@ -42,6 +42,10 @@ export interface JSONNode {
   attributes: CssAttributes
 }
 
+const trimWhiteSpaces = (str: string) => {
+  return str.replace(/^[ \t]+|[ \t]+$/g, '');
+}
+
 export const toJSON = function (
   cssString: string,
   args = defaultArgs
@@ -93,8 +97,8 @@ export const toJSON = function (
       const attr = lineAttrX.exec(line);
       if (attr) {
         // Attribute
-        const name = attr[1].trim();
-        const value = attr[2].trim();
+        const name = trimWhiteSpaces(attr[1])
+        const value = trimWhiteSpaces(attr[2])
         if (args.ordered) {
           node[count++] = { name, value, type: 'attr' };
         } else {

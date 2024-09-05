@@ -1,0 +1,11 @@
+{
+    "children": {
+        ".App": {
+            "children": {},
+            "attributes": {
+                "grid-template-areas": "\n    \"banner banner banner\"\n    \"sidebar topbar topbar\"\n    \"sidebar main main\"\n    \"sidebar footer footer\""
+            }
+        }
+    },
+    "attributes": {}
+}
