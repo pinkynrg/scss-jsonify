@@ -30,7 +30,7 @@ jobs:
       - name: Generate version and changelog
         run: |
           npx standard-version
-          git push --follow-tags origin main
+          git push --follow-tags origin master
 
       - name: Install dependencies
         run: npm run build
